@@ -6,6 +6,10 @@ public class PausePanel : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    void Start()
+    {
+        pauseMenuUI.SetActive(false);
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
