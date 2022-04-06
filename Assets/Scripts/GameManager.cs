@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = "Porritos: "+score.ToString();
-        if(score % 20 == 0)
+        if(score <= 150 && score % 20 == 0)
         {
             player.PlayerRunVelocity += 3;
         }
